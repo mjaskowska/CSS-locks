@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
  }
+ 
  body{
      background: #1C2335;
      width: 100vw;
      height: 100vh;
  }
+
 @mixin button {
     padding: 10px;
     border: none;
@@ -19,6 +21,7 @@
     font-size: 1rem;
     box-shadow: 0px 0px 0.3rem rgb(20, 20, 20);
 }
+
  @mixin breakpoint-section {
     color: white;
     display: block;
@@ -47,11 +50,10 @@
            background: transparent;
            border-bottom: 2px solid grey;
            color: white;
-          
         }
     }
-
  }
+
  h1 {
      color: white;
      font-size: 1.5rem;
@@ -60,6 +62,7 @@
      font-family: 'Red Hat Text', sans-serif;
      font-weight: 400;
  }
+
  .btn-menu{
     display: flex;
     flex-direction: row;
@@ -93,7 +96,7 @@
  .submit-menu {
     display: flex;
     flex-direction: row;
-   justify-content: flex-start;
+    justify-content: flex-start;
     margin: 0 auto 55px auto;
     width: 60%;
 
@@ -103,8 +106,6 @@
     .calculate{
         margin-right: 6px;
         background: #767d92;
-
-        
     }
     .calculate:hover{
         background: #505774;
@@ -125,30 +126,27 @@
        margin-bottom: 20px;
        color: #B9B3B3;
     }
-     .result-bkg{
+    .result-bkg{
         height: 100px;
         width: 100%;
         background: #51586B;
         border-radius: 9px;
-        
-     }
+    }
  }
  footer{
      height: 100px;
  }
 
  @media (min-width: 768px){
-.btn-menu{
-    .font-btn {
-        margin-right: 30px;
-     }
-     .line-btn {
-        margin-right: 30px;
-     }
-}
-.submit-menu{
-    justify-content: flex-end;
-    
-}
-
+    .btn-menu{
+        .font-btn {
+            margin-right: 30px;
+        }
+        .line-btn {
+            margin-right: 30px;
+        }
+    }
+    .submit-menu{
+        justify-content: flex-end;
+    }
  }
