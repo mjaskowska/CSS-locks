@@ -1,1 +1,185 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #1C2335;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 95px auto 70px auto;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 400;
+}
+
+.btn-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 55px;
+}
+
+.btn-menu .btn {
+  padding: 10px;
+  border: none;
+  border-radius: 9px;
+  color: #e7e0e0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: #454a58;
+  outline: none;
+  font-size: 1rem;
+  -webkit-box-shadow: 0px 0px 0.3rem #141414;
+          box-shadow: 0px 0px 0.3rem #141414;
+}
+
+.btn-menu .font-btn {
+  margin-right: 6px;
+}
+
+.btn-menu .line-btn {
+  margin-right: 6px;
+}
+
+.btn-menu .line-btn:hover, .btn-menu .font-btn:hover, .btn-menu .combined-btn:hover {
+  background: #767d92;
+}
+
+.btn-menu .line-btn:checked, .btn-menu .font-btn:checked, .btn-menu .combined-btn:checked {
+  background: #767d92;
+}
+
+.lower-breakpoint {
+  color: white;
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.lower-breakpoint p {
+  margin-bottom: 20px;
+  color: #B9B3B3;
+}
+
+.lower-breakpoint .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.lower-breakpoint .container label {
+  font-weight: 400;
+}
+
+.lower-breakpoint .container input {
+  width: 90%;
+  display: block;
+  height: 35px;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid grey;
+  color: white;
+}
+
+.submit-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto 55px auto;
+  width: 60%;
+}
+
+.submit-menu button {
+  padding: 10px;
+  border: none;
+  border-radius: 9px;
+  color: #e7e0e0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: #454a58;
+  outline: none;
+  font-size: 1rem;
+  -webkit-box-shadow: 0px 0px 0.3rem #141414;
+          box-shadow: 0px 0px 0.3rem #141414;
+}
+
+.submit-menu .calculate {
+  margin-right: 6px;
+  background: #767d92;
+}
+
+.submit-menu .calculate:hover {
+  background: #505774;
+}
+
+.submit-menu .reset:hover {
+  background: #505774;
+}
+
+.result {
+  color: white;
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.result p {
+  margin-bottom: 20px;
+  color: #B9B3B3;
+}
+
+.result .result-bkg {
+  height: 100px;
+  width: 100%;
+  background: #51586B;
+  border-radius: 9px;
+}
+
+footer {
+  height: 100px;
+}
+
+@media (min-width: 768px) {
+  .btn-menu .font-btn {
+    margin-right: 30px;
+  }
+  .btn-menu .line-btn {
+    margin-right: 30px;
+  }
+  .submit-menu {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

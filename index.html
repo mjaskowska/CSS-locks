@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CSS Locks Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/styles.css">
-  </head>
-  <body>
-    
-    
-    <script src="./main.js" async defer></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Locks Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&family=Roboto+Condensed&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <h1>CSS Locks Generator</h1>
+
+  <section class="btn-menu">
+    <button class="btn font-btn">Font-size</button>
+    <button class="btn line-btn">Line-height</button>
+    <button class="btn combined-btn">Combined</button>
+  </section>
+
+  <section class="lower-breakpoint">
+    <p>Lower breakpoint</p>
+    <div class="container">
+      <div class="min-font-section">
+        <label for="min-font">Value <small>(px)</small>:</label>
+        <input type="text" id="min-font" name="min-font" required>
+      </div>
+      <div class="min-width-section">
+        <label for="min-font">at width <small>(px)</small>:</label>
+        <input type="text" id="min-font" name="min-font" required>
+      </div>
+    </div>
+  </section>
+
+  <section class="lower-breakpoint">
+    <p>Higher breakpoint</p>
+    <div class="container">
+      <div class="max-font-section">
+        <label for="max-font">Value <small>(px)</small>:</label>
+        <input type="text" id="max-font" name="max-font" required>
+      </div>
+      <div class="max-width-section">
+        <label for="max-font">at width <small>(px)</small>:</label>
+        <input type="text" id="max-font" name="max-font" required>
+      </div>
+    </div>
+  </section>
+
+  <section class="btn submit-menu">
+    <button class="calculate">Calculate</button>
+    <button class="reset">Reset</button>
+  </section>
+
+  <section class="result">
+    <p>Copy your code</p>
+    <div class="result-bkg"></div>
+  </section>
+<footer>
+  
+</footer>
+  <script src="./main.js" async defer></script>
+</body>
+
 </html>
