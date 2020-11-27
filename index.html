@@ -25,28 +25,30 @@
   <section class="lower-breakpoint">
     <p>Lower breakpoint</p>
     <div class="container">
-      <div class="min-font-section">
+      <section class="min-font-section">
         <label for="min-font">Value <small>(px)</small>:</label>
         <input type="text" id="min-font" name="min-font" required>
-      </div>
-      <div class="min-width-section">
-        <label for="min-font">at width <small>(px)</small>:</label>
-        <input type="text" id="min-font" name="min-font" required>
-      </div>
+      </section>
+
+      <section class="min-width-section">
+        <label for="min-width">at width <small>(px)</small>:</label>
+        <input type="text" id="min-width" name="min-width" required>
+      </section>
     </div>
   </section>
 
   <section class="lower-breakpoint">
     <p>Higher breakpoint</p>
     <div class="container">
-      <div class="max-font-section">
-        <label for="max-font">Value <small>(px)</small>:</label>
+      <section class="max-font-section">
+        <label for="max-font" >Value <small>(px)</small>:</label>
         <input type="text" id="max-font" name="max-font" required>
-      </div>
-      <div class="max-width-section">
-        <label for="max-font">at width <small>(px)</small>:</label>
-        <input type="text" id="max-font" name="max-font" required>
-      </div>
+      </section>
+
+      <section class="max-width-section">
+        <label for="max-width">at width <small>(px)</small>:</label>
+        <input type="text" id="max-width" name="max-width" required>
+      </section>
     </div>
   </section>
 
@@ -55,9 +57,13 @@
     <button class="reset">Reset</button>
   </section>
 
+  <section class="errorMsg" style="display: none"></section>
+
   <section class="result">
     <p>Copy your code</p>
-    <div class="result-bkg"></div>
+    <div class="result-bkg">
+      
+    </div>
   </section>
 <footer>
   

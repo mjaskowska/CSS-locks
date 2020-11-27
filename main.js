@@ -1,110 +1,115 @@
-// const minWidth = 320;
-// const maxWidth = 1000;
 
-// const minFont = 16;
-// const maxFont = 25;
+// new version of code - more adaptable
 
-const countFontSizeLock = () => {
 
-// y=mx + b
+const minWidth = document.getElementById('min-width').value;
+const maxWidth = document.getElementById('max-width').value;
 
-const minWidthVal = document.getElementById("minWidth").value;
-const maxWidthVal = document.getElementById("maxWidth").value;
+// count font size variables
+const fontMinPx = document.getElementById('min-font').value;
+const fontMaxPx = document.getElementById('max-font').value;
+const fontMinRem = fontMinPx / 16;
 
-const minFontVal = document.getElementById("minFont").value;
-const maxFontVal = document.getElementById("maxFont").value;
-  
-const m =  (maxFontVal - minFontVal) / (maxWidthVal - minWidthVal);
-const b = minFontVal - (m * minWidthVal);
 
-const mLock = Math.round(((m*100) + Number.EPSILON) * 1000) / 1000;
-const bLock = Math.round((b + Number.EPSILON) * 100) / 100;
+// font-size calc
 
-    if (minWidthVal === '' 	|| maxWidthVal === ''	|| minFontVal === '' 	|| maxFontVal === '' ) {
-        
+const countFontSize = () => {
+
+    const minWidth = document.getElementById('min-width').value;
+    const maxWidth = document.getElementById('max-width').value;
+
+    const fontMinPx = document.getElementById('min-font').value;
+    const fontMaxPx = document.getElementById('max-font').value;
+    const fontMinRem = fontMinPx / 16;
+
+    const mFont = (fontMaxPx - fontMinPx) / (maxWidth - minWidth);
+    const bFont = 0 - (mFont * minWidth);
+    const mFontvw = mFont * 100;
+    const fontDiffPx = fontMaxPx - fontMinPx;
+
+    const bFont1 = Math.round((bFont + Number.EPSILON) * 1000) / 1000;
+    const mFontvw1 = Math.round((mFontvw + Number.EPSILON) * 1000) / 1000;
+
+    
+    const numbers = /^[0-9]+$/;
+
+    if (minWidth === '' || maxWidth === '' || fontMinPx === '' || fontMaxPx === '' || 
+        !minWidth.match(numbers) || !maxWidth.match(numbers) || !fontMinPx.match(numbers) || !fontMaxPx.match(numbers)) {
+
         const errorMsg = document.querySelector('.errorMsg');
-        errorMsg.innerHTML="Fill all the fields";
+        errorMsg.innerHTML = "Fill all the fields with a valid number";
         errorMsg.style.display = "block";
     }
-    else{
+    else {
         const errorMsg = document.querySelector('.errorMsg');
         errorMsg.style.display = "none";
 
-        const code = document.createElement('div');
-        code.setAttribute('class', 'notification');
-        const codeContainer = document.querySelector('.output-code-container')
-        codeContainer.appendChild(code);
 
+        const code1 = document.createElement('div');
+        const code2 = document.createElement('div');
+        const code3 = document.createElement('div');
+        code1.setAttribute('class', 'result-code');
+        code2.setAttribute('class', 'result-code');
+        code3.setAttribute('class', 'result-code');
+        const codeContainer = document.querySelector('.result-bkg')
+        codeContainer.appendChild(code1);
+        codeContainer.appendChild(code2);
+        codeContainer.appendChild(code3);
 
-            if (bLock >= 0){
-                console.log("err1");
-                code.innerHTML=`font-size: ${minFontVal}px; | @media (min-width: ${minWidthVal}px) { font-size: calc(${mLock}vw + ${bLock}px); } | @media (min-width: ${maxWidthVal}) { font-size: ${maxFontVal}px; }`;
-                
-            }
-            
-            else {
-                console.log("err2");
-                code.innerHTML=`font-size: ${minFontVal}px; | @media (min-width: ${minWidthVal}px) { font-size: calc(${mLock}vw ${bLock}px); } | @media (min-width: ${maxWidthVal}) { font-size: ${maxFontVal}px; }`;
-                
-            }
-
+        code1.innerHTML=`font-size: ${fontMinRem}rem;`
+        code2.innerHTML=`@media (min-width: ${minWidth}px) { font-size: calc(${fontMinRem}rem + ${mFontvw1}vw + ${bFont1}px); }`
+        code3.innerHTML=`@media (min-width: ${maxWidth}px) { font-size: calc(${fontMinRem}rem + ${fontDiffPx}px); }`
     }
 
+    console.log(`font-size: ${fontMinRem}rem;`)
+    console.log(`@media (min-width: ${minWidth}px) { font-size: calc(${fontMinRem}rem + ${mFontvw1}vw + ${bFont1}px); }`)
+    console.log(`@media (min-width: ${maxWidth}px) { font-size: calc(${fontMinRem}rem + ${fontDiffPx}px); }`)
 }
 
-// ----------------------------------------------------------------------------------------
-// new version of code - more adaptable
+const calculateBtn = document.querySelector('.calculate');
+calculateBtn.addEventListener('click', countFontSize);
 
-// const minWidth = 320;
-// const maxWidth = 960;
-
-// // count font size variables
-// const fontMinPx = 10;
-// const fontMaxPx = 50;
-// const fontMinRem = fontMinPx / 16;
-// const fontMaxRem = fontMaxPx / 16;
+// count line height variables
+const lineHMinRem = 1.5;
+const lineHMaxRem = 2;
+const lineHMinPx = lineHMinRem * 16;
+const lineHMaxPx = lineHMaxRem * 16;
 
 
-// // count line height variables
-// const lineHMinRem = 1.5;
-// const lineHMaxRem = 2;
-// const lineHMinPx = lineHMinRem * 16;
-// const lineHMaxPx = lineHMaxRem * 16;
+
+const countLineHeight = () => {
+
+    const mLine = (lineHMaxPx - lineHMinPx) / (maxWidth - minWidth);
+    const bLine = 0 - (mLine * minWidth)
+    const mLinevw = mLine * 100;
+
+    const mLinevw1 = Math.round((mLinevw + Number.EPSILON) * 1000) / 1000;
+    const bLine1 = Math.round((bLine + Number.EPSILON) * 1000) / 1000;
+    const pxDiff = Math.round(((lineHMaxPx - lineHMinPx) + Number.EPSILON) * 1000) / 1000;
+
+    console.log(`line-height: ${lineHMinRem}rem;`)
+    console.log(`@media (min-width: ${minWidth}px){ line-height: calc(${lineHMinRem}rem + ${mLinevw1}vw + ${bLine1}px); }`)
+    console.log(`@media (min-width: ${maxWidth}px){ line-height: calc(${lineHMinRem}rem + ${pxDiff}px); }`)
+}
 
 
-// const countLineHeight = () => {
-    
-//     const mLine = (lineHMaxPx - lineHMinPx) / (maxWidth - minWidth);
-//     const bLine = 0 - (mLine * minWidth)
-//     const mLinevw = mLine * 100;
 
-//     const mLinevw1 = Math.round((mLinevw + Number.EPSILON) * 1000) / 1000;
-//     const bLine1 = Math.round((bLine + Number.EPSILON) * 1000) / 1000;
-//     const pxDiff = Math.round(((lineHMaxPx - lineHMinPx) + Number.EPSILON) * 1000) / 1000;
+const reset = () => {
 
-//     console.log(`line-height: ${lineHMinRem}rem;`)
-//     console.log(`@media (min-width: ${minWidth}px){ line-height: calc(${lineHMinRem}rem + ${mLinevw1}vw + ${bLine1}px); }`)
-//     console.log(`@media (min-width: ${maxWidth}px){ line-height: calc(${lineHMinRem}rem + ${pxDiff}px); }`)
-// }
+    const minWidth = document.getElementById('min-width');
+    const maxWidth = document.getElementById('max-width');
 
+    const fontMinPx = document.getElementById('min-font');
+    const fontMaxPx = document.getElementById('max-font');
 
-// // font-size calc
+    minWidth.value = '';
+    maxWidth.value = '';
+    fontMinPx.value = '';
+    fontMaxPx.value = '';
+    const codeContainer = document.querySelector('.result-bkg')
+    codeContainer.innerHTML = '';
 
-// const countFontSize = () => {
+}
+const resetBtn = document.querySelector('.reset');
+ resetBtn.addEventListener('click', reset);
 
-//     const mFont = (fontMaxPx - fontMinPx) / (maxWidth - minWidth);
-//     const bFont = 0 - (mFont * minWidth);
-//     const mFontvw = mFont * 100;
-//     const fontDiffPx = fontMaxPx - fontMinPx;
-
-//     const bFont1 = Math.round((bFont + Number.EPSILON) * 1000) / 1000;
-//     const mFontvw1 = Math.round((mFontvw + Number.EPSILON) * 1000) / 1000;
-
-//     console.log(`font-size: ${fontMinRem}rem;`)
-//     console.log(`@media (min-width: ${minWidth}px) { font-size: calc(${fontMinRem}rem + ${mFontvw1}vw + ${bFont1}px); }`)
-//     console.log(`@media (min-width: ${maxWidth}px) { font-size: calc(${fontMinRem}rem + ${fontDiffPx}px); }`)
-
-// }
-
-// countFontSize();
-// countLineHeight();
