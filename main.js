@@ -2,13 +2,8 @@
 const minWidthInput = document.querySelector('.min-width');
 const maxWidthInput = document.querySelector('.max-width');
 
-// count font size variables
 const fontMinPxInput = document.querySelector('.min-font');
 const fontMaxPxInput = document.querySelector('.max-font');
-
-// count line height variables
-const lineHMinRemInput = 1.5;
-const lineHMaxRemInput = 2;
 
 
 // font-size calc
@@ -66,28 +61,6 @@ function countFontSize() {
 const calculateBtn1 = document.querySelector('.calc1');
 calculateBtn1.addEventListener('click', countFontSize);
 
-const countLineHeight = () => {
-
-    const minWidth = parseFloat(minWidthInput.value);
-    const maxWidth = parseFloat(maxWidthInput.value);
-    const lineHMinRem = parseFloat(lineHMinRemInput.value);
-    const lineHMaxRem = parseFloat(lineHMaxRemInput.value);
-
-    const lineHMinPx = lineHMinRem * 16;
-    const lineHMaxPx = lineHMaxRem * 16;
-
-    const mLine = (lineHMaxPx - lineHMinPx) / (maxWidth - minWidth);
-    const bLine = 0 - (mLine * minWidth)
-    const mLinevw = mLine * 100;
-
-    const mLinevw1 = Math.round((mLinevw + Number.EPSILON) * 1000) / 1000;
-    const bLine1 = Math.round((bLine + Number.EPSILON) * 1000) / 1000;
-    const pxDiff = Math.round(((lineHMaxPx - lineHMinPx) + Number.EPSILON) * 1000) / 1000;
-
-    console.log(`line-height: ${lineHMinRem}rem;`)
-    console.log(`@media (min-width: ${minWidth}px){ line-height: calc(${lineHMinRem}rem + ${mLinevw1}vw + ${bLine1}px); }`)
-    console.log(`@media (min-width: ${maxWidth}px){ line-height: calc(${lineHMinRem}rem + ${pxDiff}px); }`)
-}
 
 const reset = () => {
 

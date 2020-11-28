@@ -87,10 +87,16 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 55px;
-
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
     .btn {
         @include button();
        
+    }
+    .btn-active {
+        background: #767d92;
     }
     .font-btn {
        margin-right: 6px;
@@ -106,7 +112,7 @@
     }
  }
 
- .lower-breakpoint{
+ .breakpoint{
      @include breakpoint-section();
      margin-bottom: 40px;
  }
