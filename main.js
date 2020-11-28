@@ -1,27 +1,27 @@
 
-// new version of code - more adaptable
-
-
-const minWidth = document.getElementById('min-width').value;
-const maxWidth = document.getElementById('max-width').value;
+const minWidthInput = document.querySelector('.min-width');
+const maxWidthInput = document.querySelector('.max-width');
 
 // count font size variables
-const fontMinPx = document.getElementById('min-font').value;
-const fontMaxPx = document.getElementById('max-font').value;
-const fontMinRem = fontMinPx / 16;
+const fontMinPxInput = document.querySelector('.min-font');
+const fontMaxPxInput = document.querySelector('.max-font');
+
+// count line height variables
+const lineHMinRemInput = 1.5;
+const lineHMaxRemInput = 2;
 
 
 // font-size calc
 
-const countFontSize = () => {
+function countFontSize () {
 
-    const minWidth = document.getElementById('min-width').value;
-    const maxWidth = document.getElementById('max-width').value;
-
-    const fontMinPx = document.getElementById('min-font').value;
-    const fontMaxPx = document.getElementById('max-font').value;
+    const minWidth = parseFloat(minWidthInput.value);
+    const maxWidth = parseFloat(maxWidthInput.value);
+    const fontMinPx = parseFloat(fontMinPxInput.value);
+    const fontMaxPx = parseFloat(fontMaxPxInput.value);
     const fontMinRem = fontMinPx / 16;
-
+   
+    
     const mFont = (fontMaxPx - fontMinPx) / (maxWidth - minWidth);
     const bFont = 0 - (mFont * minWidth);
     const mFontvw = mFont * 100;
@@ -31,10 +31,8 @@ const countFontSize = () => {
     const mFontvw1 = Math.round((mFontvw + Number.EPSILON) * 1000) / 1000;
 
     
-    const numbers = /^[0-9]+$/;
 
-    if (minWidth === '' || maxWidth === '' || fontMinPx === '' || fontMaxPx === '' || 
-        !minWidth.match(numbers) || !maxWidth.match(numbers) || !fontMinPx.match(numbers) || !fontMaxPx.match(numbers)) {
+    if (minWidth === '' || maxWidth === '' || fontMinPx === '' || fontMaxPx === '') {
 
         const errorMsg = document.querySelector('.errorMsg');
         errorMsg.innerHTML = "Fill all the fields with a valid number";
@@ -69,15 +67,19 @@ const countFontSize = () => {
 const calculateBtn = document.querySelector('.calculate');
 calculateBtn.addEventListener('click', countFontSize);
 
-// count line height variables
-const lineHMinRem = 1.5;
-const lineHMaxRem = 2;
-const lineHMinPx = lineHMinRem * 16;
-const lineHMaxPx = lineHMaxRem * 16;
+
 
 
 
 const countLineHeight = () => {
+
+    const minWidth = parseFloat(minWidthInput.value);
+    const maxWidth = parseFloat(maxWidthInput.value);
+    const lineHMinRem = parseFloat(lineHMinRemInput.value);
+    const lineHMaxRem = parseFloat(lineHMaxRemInput.value);
+    
+    const lineHMinPx = lineHMinRem * 16;
+    const lineHMaxPx = lineHMaxRem * 16;
 
     const mLine = (lineHMaxPx - lineHMinPx) / (maxWidth - minWidth);
     const bLine = 0 - (mLine * minWidth)

@@ -199,6 +199,10 @@ footer {
 }
 
 @media (min-width: 768px) {
+  body {
+    max-width: 90%;
+    margin: 0 auto;
+  }
   .btn-menu .font-btn {
     margin-right: 30px;
   }
@@ -209,6 +213,12 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    max-width: 75%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
