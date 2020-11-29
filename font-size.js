@@ -14,6 +14,7 @@ function countFontSize() {
     const maxWidth = parseFloat(maxWidthInput.value);
     const fontMinPx = parseFloat(fontMinPxInput.value);
     const fontMaxPx = parseFloat(fontMaxPxInput.value);
+    
     const fontMinRem = fontMinPx / 16;
 
 

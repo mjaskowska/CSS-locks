@@ -23,17 +23,25 @@
     <button class="btn combined-btn btn-active">Combined</button>
   </section>
 
+<section class="breakpoint-container">
   <section class="breakpoint">
     <p>Lower breakpoint</p>
+
     <div class="container">
       <section class="min-font-section">
-        <label for="min-font">Value <small>(px)</small>:</label>
-        <input type="text" id="min-font"  class="min-font" name="min-font" required>
+        <label for="min-font-3">Font-size value<small>(px)</small>:</label>
+        <input type="text" id="min-font-3"  class="min-font-3" name="min-font-3" required>
+      </section>
+      <br>
+    
+      <section class="min-line-section">
+        <label for="min-line-3">Line height value <small>(rem)</small>:</label>
+        <input type="text" id="min-line-3"  class="min-line-3" name="min-line-3" required>
       </section>
 
       <section class="min-width-section">
-        <label for="min-width">at width <small>(px)</small>:</label>
-        <input type="text" id="min-width" class="min-width" name="min-width" required>
+        <label for="min-width-3">at width <small>(px)</small>:</label>
+        <input type="text" id="min-width-3" class="min-width-3" name="min-width-3" required>
       </section>
     </div>
   </section>
@@ -42,20 +50,26 @@
     <p>Higher breakpoint</p>
     <div class="container">
       <section class="max-font-section">
-        <label for="max-font" >Value <small>(px)</small>:</label>
-        <input type="text" id="max-font" class="max-font" name="max-font" required>
+        <label for="max-font-3" >Value <small>(px)</small>:</label>
+        <input type="text" id="max-font-3" class="max-font-3" name="max-font-3" required>
+      </section>
+      <br>
+      <section class="max-line-section">
+        <label for="max-line-3" >Value <small>(px)</small>:</label>
+        <input type="text" id="max-line-3" class="max-line-3" name="max-line-3" required>
       </section>
 
       <section class="max-width-section">
-        <label for="max-width">at width <small>(px)</small>:</label>
-        <input type="text" id="max-width" class="max-width"  name="max-width" required>
+        <label for="max-width-3">at width <small>(px)</small>:</label>
+        <input type="text" id="max-width-3" class="max-width-3"  name="max-width-3" required>
       </section>
     </div>
   </section>
+</section>
 
   <section class="btn submit-menu">
-    <button class="calculate calc1">Calculate</button>
-    <button class="reset">Reset</button>
+    <button class="calculate calc3">Calculate</button>
+    <button class="reset reset3">Reset</button>
   </section>
 
   <section class="errorMsg" style="display: none"></section>
@@ -69,7 +83,7 @@
 <footer>
   
 </footer>
-  <script src="./main.js" async defer></script>
+  <script src="./combined.js" async defer></script>
 </body>
 
 </html>

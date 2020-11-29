@@ -126,6 +126,15 @@ h1 {
   border-radius: 10px;
 }
 
+.breakpoint-container .breakpoint section {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+.breakpoint-container .breakpoint label {
+  padding-bottom: 40px;
+}
+
 .submit-menu {
   display: -webkit-box;
   display: -ms-flexbox;

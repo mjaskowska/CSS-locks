@@ -46,7 +46,7 @@ function countLineHeight () {
         codeContainer.appendChild(code3);
 
         code1.innerHTML = `line-height: ${lineHMinRem}rem;`
-        code2.innerHTML = `@media (min-width: ${minWidth}px){ line-height: calc(${lineHMinRem}rem + ${mLinevw1}vw + ${bLine1}px); } }`
+        code2.innerHTML = `@media (min-width: ${minWidth}px){ line-height: calc(${lineHMinRem}rem + ${mLinevw1}vw + ${bLine1}px); }`
         code3.innerHTML = `@media (min-width: ${maxWidth}px){ line-height: calc(${lineHMinRem}rem + ${pxDiff}px); }`
     }
     // result testing

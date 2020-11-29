@@ -117,6 +117,17 @@
      margin-bottom: 40px;
  }
 
+ .breakpoint-container {
+     .breakpoint {
+         section {
+             margin-top: 5px;
+             font-size: 0.8rem;
+         }
+         label { padding-bottom: 40px;}
+    }
+     
+ }
+
  .submit-menu {
     display: flex;
     flex-direction: row;
