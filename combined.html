@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>CSS Locks Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&family=Roboto+Condensed&display=swap"
@@ -17,72 +18,75 @@
   <h1>CSS Locks Generator</h1>
 
   <section class="btn-menu">
-    
+
     <button class="btn font-btn "><a href="./index.html">Font-size</a></button>
     <button class="btn line-btn"><a href="./line height.html">Line-height</a></button>
     <button class="btn combined-btn btn-active">Combined</button>
   </section>
+  <section class="body-content">
 
-<section class="breakpoint-container">
-  <section class="breakpoint">
-    <p>Lower breakpoint</p>
+    <section class="breakpoint-container">
+      <section class="breakpoint">
+        <p class="subititle-lower-3">Lower breakpoint</p>
 
-    <div class="container">
-      <section class="min-font-section">
-        <label for="min-font-3">Font-size value<small>(px)</small>:</label>
-        <input type="text" id="min-font-3"  class="min-font-3" name="min-font-3" required>
-      </section>
-      <br>
-    
-      <section class="min-line-section">
-        <label for="min-line-3">Line height value <small>(rem)</small>:</label>
-        <input type="text" id="min-line-3"  class="min-line-3" name="min-line-3" required>
+        <div class="container">
+          <section class="min-font-section">
+            <label for="min-font-3">Font-size value<small>(px)</small>:</label>
+            <input type="text" id="min-font-3" class="min-font-3" name="min-font-3" required>
+          </section>
+          <br>
+
+          <section class="min-line-section">
+            <label for="min-line-3">Line height value <small>(rem)</small>:</label>
+            <input type="text" id="min-line-3" class="min-line-3" name="min-line-3" required>
+          </section>
+
+          <section class="min-width-section">
+            <label for="min-width-3">at width <small>(px)</small>:</label>
+            <input type="text" id="min-width-3" class="min-width-3" name="min-width-3" required>
+          </section>
+        </div>
       </section>
 
-      <section class="min-width-section">
-        <label for="min-width-3">at width <small>(px)</small>:</label>
-        <input type="text" id="min-width-3" class="min-width-3" name="min-width-3" required>
+      <section class="breakpoint">
+        <p class="subtitle-higher-3">Higher breakpoint</p>
+        <div class="container">
+          <section class="max-font-section">
+            <label for="max-font-3">Value <small>(px)</small>:</label>
+            <input type="text" id="max-font-3" class="max-font-3" name="max-font-3" required>
+          </section>
+          <br>
+          <section class="max-line-section">
+            <label for="max-line-3">Value <small>(px)</small>:</label>
+            <input type="text" id="max-line-3" class="max-line-3" name="max-line-3" required>
+          </section>
+
+          <section class="max-width-section">
+            <label for="max-width-3">at width <small>(px)</small>:</label>
+            <input type="text" id="max-width-3" class="max-width-3" name="max-width-3" required>
+          </section>
+        </div>
       </section>
-    </div>
+    </section>
+
+    <section class="btn submit-menu">
+      <button class="calculate calc3">Calculate</button>
+      <button class="reset reset3">Reset</button>
+    </section>
+
+    <section class="errorMsg" style="display: none"></section>
+
+    <section class="result">
+      <p>Copy your code</p>
+      <div class="result-bkg">
+
+      </div>
+    </section>
   </section>
+  <footer>
 
-  <section class="breakpoint">
-    <p>Higher breakpoint</p>
-    <div class="container">
-      <section class="max-font-section">
-        <label for="max-font-3" >Value <small>(px)</small>:</label>
-        <input type="text" id="max-font-3" class="max-font-3" name="max-font-3" required>
-      </section>
-      <br>
-      <section class="max-line-section">
-        <label for="max-line-3" >Value <small>(px)</small>:</label>
-        <input type="text" id="max-line-3" class="max-line-3" name="max-line-3" required>
-      </section>
-
-      <section class="max-width-section">
-        <label for="max-width-3">at width <small>(px)</small>:</label>
-        <input type="text" id="max-width-3" class="max-width-3"  name="max-width-3" required>
-      </section>
-    </div>
-  </section>
-</section>
-
-  <section class="btn submit-menu">
-    <button class="calculate calc3">Calculate</button>
-    <button class="reset reset3">Reset</button>
-  </section>
-
-  <section class="errorMsg" style="display: none"></section>
-
-  <section class="result">
-    <p>Copy your code</p>
-    <div class="result-bkg">
-      
-    </div>
-  </section>
-<footer>
-  
-</footer>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="./combined.js" async defer></script>
 </body>
 

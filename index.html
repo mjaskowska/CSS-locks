@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>CSS Locks Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&family=Roboto+Condensed&display=swap"
@@ -17,58 +18,61 @@
   <h1>CSS Locks Generator</h1>
 
   <section class="btn-menu">
-    
+
     <button class="btn font-btn btn-active">Font-size</button>
     <button class="btn line-btn"><a href="./line height.html">Line-height</a></button>
     <button class="btn combined-btn"><a href="./combined.html">Combined</a></button>
   </section>
 
-  <section class="breakpoint">
-    <p>Lower breakpoint</p>
-    <div class="container">
-      <section class="min-font-section">
-        <label for="min-font">Value <small>(px)</small>:</label>
-        <input type="text" id="min-font"  class="min-font" name="min-font" required>
-      </section>
+  <section class="body-content">
+    <section class="breakpoint">
+      <p class="subtitle-lower">Lower breakpoint</p>
+      <div class="container">
+        <section class="min-font-section">
+          <label for="min-font">Value <small>(px)</small>:</label>
+          <input type="text" id="min-font" class="min-font" name="min-font" required>
+        </section>
 
-      <section class="min-width-section">
-        <label for="min-width">at width <small>(px)</small>:</label>
-        <input type="text" id="min-width" class="min-width" name="min-width" required>
-      </section>
-    </div>
+        <section class="min-width-section">
+          <label for="min-width">at width <small>(px)</small>:</label>
+          <input type="text" id="min-width" class="min-width" name="min-width" required>
+        </section>
+      </div>
+    </section>
+
+    <section class="breakpoint">
+      <p class="subtitle-higher">Higher breakpoint</p>
+      <div class="container">
+        <section class="max-font-section">
+          <label for="max-font">Value <small>(px)</small>:</label>
+          <input type="text" id="max-font" class="max-font" name="max-font" required>
+        </section>
+
+        <section class="max-width-section">
+          <label for="max-width">at width <small>(px)</small>:</label>
+          <input type="text" id="max-width" class="max-width" name="max-width" required>
+        </section>
+      </div>
+    </section>
+
+    <section class="btn submit-menu">
+      <button class="calculate calc1">Calculate</button>
+      <button class="reset">Reset</button>
+    </section>
+
+    <section class="errorMsg" style="display: none"></section>
+
+    <section class="result">
+      <p>Copy your code</p>
+      <div class="result-bkg">
+
+      </div>
+    </section>
   </section>
+  <footer>
 
-  <section class="breakpoint">
-    <p>Higher breakpoint</p>
-    <div class="container">
-      <section class="max-font-section">
-        <label for="max-font" >Value <small>(px)</small>:</label>
-        <input type="text" id="max-font" class="max-font" name="max-font" required>
-      </section>
-
-      <section class="max-width-section">
-        <label for="max-width">at width <small>(px)</small>:</label>
-        <input type="text" id="max-width" class="max-width"  name="max-width" required>
-      </section>
-    </div>
-  </section>
-
-  <section class="btn submit-menu">
-    <button class="calculate calc1">Calculate</button>
-    <button class="reset">Reset</button>
-  </section>
-
-  <section class="errorMsg" style="display: none"></section>
-
-  <section class="result">
-    <p>Copy your code</p>
-    <div class="result-bkg">
-      
-    </div>
-  </section>
-<footer>
-  
-</footer>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="./font-size.js" async defer></script>
 </body>
 

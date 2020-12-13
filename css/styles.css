@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #1C2335;
+  background: #1c2335;
   width: 100vw;
   height: 100vh;
 }
@@ -16,7 +16,7 @@ h1 {
   font-size: 1.5rem;
   text-align: center;
   margin: 95px auto 70px auto;
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
   font-weight: 400;
 }
 
@@ -47,7 +47,7 @@ h1 {
   border: none;
   border-radius: 9px;
   color: #e7e0e0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background: #454a58;
   outline: none;
   font-size: 1rem;
@@ -67,18 +67,22 @@ h1 {
   margin-right: 6px;
 }
 
-.btn-menu .line-btn:hover, .btn-menu .font-btn:hover, .btn-menu .combined-btn:hover {
+.btn-menu .line-btn:hover,
+.btn-menu .font-btn:hover,
+.btn-menu .combined-btn:hover {
   background: #767d92;
 }
 
-.btn-menu .line-btn:checked, .btn-menu .font-btn:checked, .btn-menu .combined-btn:checked {
+.btn-menu .line-btn:checked,
+.btn-menu .font-btn:checked,
+.btn-menu .combined-btn:checked {
   background: #767d92;
 }
 
 .breakpoint {
   color: white;
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
   margin: 0 auto;
   width: 70%;
@@ -87,7 +91,7 @@ h1 {
 
 .breakpoint p {
   margin-bottom: 20px;
-  color: #B9B3B3;
+  color: #b9b3b3;
 }
 
 .breakpoint .container {
@@ -126,6 +130,124 @@ h1 {
   border-radius: 10px;
 }
 
+.breakpoint p.subtitle-lower {
+  position: relative;
+}
+
+.breakpoint p.subtitle-lower::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f034";
+  font-size: 20px;
+  top: 5px;
+  left: -25px;
+}
+
+.breakpoint p.subtitle-higher {
+  position: relative;
+}
+
+.breakpoint p.subtitle-higher::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f034";
+  font-size: 30px;
+  left: -35px;
+}
+
+.breakpoint p.subtitle-lower-2 {
+  position: relative;
+}
+
+.breakpoint p.subtitle-lower-2::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f039";
+  font-size: 20px;
+  top: 5px;
+  left: -25px;
+}
+
+.breakpoint p.subtitle-higher-2 {
+  position: relative;
+}
+
+.breakpoint p.subtitle-higher-2::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f039";
+  font-size: 30px;
+  left: -35px;
+}
+
+.breakpoint p.subititle-lower-3 {
+  position: relative;
+}
+
+.breakpoint p.subititle-lower-3::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f034";
+  font-size: 15px;
+  top: 5px;
+  left: -25px;
+}
+
+.breakpoint p.subititle-lower-3::after {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f039";
+  font-size: 15px;
+  top: 25px;
+  left: -25px;
+}
+
+.breakpoint p.subtitle-higher-3 {
+  position: relative;
+}
+
+.breakpoint p.subtitle-higher-3::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f034";
+  font-size: 25px;
+  top: 5px;
+  left: -35px;
+}
+
+.breakpoint p.subtitle-higher-3::after {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 5px;
+  opacity: 0.6;
+  color: white;
+  content: "\f039";
+  font-size: 25px;
+  top: 35px;
+  left: -35px;
+}
+
 .breakpoint-container .breakpoint section {
   margin-top: 20px;
   font-size: 0.8rem;
@@ -155,7 +277,7 @@ h1 {
   border: none;
   border-radius: 9px;
   color: #e7e0e0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background: #454a58;
   outline: none;
   font-size: 1rem;
@@ -180,14 +302,14 @@ h1 {
   color: white;
   width: 70%;
   margin: 5px auto;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   padding-left: 3px;
 }
 
 .result {
   color: white;
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
   margin: 40px auto;
   width: 75%;
@@ -195,13 +317,13 @@ h1 {
 
 .result p {
   margin-bottom: 20px;
-  color: #B9B3B3;
+  color: #b9b3b3;
 }
 
 .result .result-bkg {
   min-height: 100px;
   width: 100%;
-  background: #51586B;
+  background: #51586b;
   border-radius: 9px;
 }
 
