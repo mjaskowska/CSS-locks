@@ -1,14 +1,21 @@
-# CSS-locks-generator
+
+## CSS Locks generator
 
 Layout design in Figma
 
 https://www.figma.com/file/Jpbu9ovyqdW48TPZcUw8qa/Untitled?node-id=0%3A1
 
 
-This tool automatically generates calc() formulas for CSS Locks.
+[Check it out](https://mjaskowska.github.io/CSS-locks-javascript)
 
-All you have to do is to declare the values of your font sizes and/or line heights at a lower and higher breakpoints and the formulas will be printed out for you to copy straight into your CSS code!
+Have you always wanted to implement responsive font sizes in your projects but never knew how to calculate CSS locks?
+            
+Fear no more! This app will handle all that complicated math for you! :)
+            
+Simply specify values of minimum and maximum font-size property that you want on your two breakpoints (media queries) and paste the code below straight into your SASS/CSS file.
 
-No more struggle!
+#### Easy!
 
--- tool currently in the process of developing.
+
+
+_This is a JavaScript version, you can also see my repo of React version [here](https://github.com/mjaskowska/CSS-locks-javascript.git)._
