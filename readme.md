@@ -1,12 +1,10 @@
 
 ## CSS Locks generator
 
-Layout design in Figma
-
-https://www.figma.com/file/Jpbu9ovyqdW48TPZcUw8qa/Untitled?node-id=0%3A1
+Layout design in [Figma](https://www.figma.com/file/Jpbu9ovyqdW48TPZcUw8qa/Untitled?node-id=0%3A1)
 
 
-[Check it out](https://mjaskowska.github.io/CSS-locks-javascript)
+[Check it out here](https://mjaskowska.github.io/CSS-locks-javascript)
 
 Have you always wanted to implement responsive font sizes in your projects but never knew how to calculate CSS locks?
             
